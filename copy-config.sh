@@ -25,15 +25,20 @@ done
 cd "$REPO"
 
 # Stage all changes
-git add .
-
-# Commit only if there are changes
-if ! git diff --cached --quiet; then
-    git commit -m "Updated current version"
-    git push origin main
-    echo "Changes committed and pushed."
+if [ -n "$SUDO_USER" ]; then
+    sudo -u "$SUDO_USER" git add .
+    if ! sudo -u "$SUDO_USER" git diff --cached --quiet; then
+        sudo -u "$SUDO_USER" git commit -m "Updated current version"
+        sudo -u "$SUDO_USER" git push origin main
+    fi
 else
-    echo "No changes to commit."
+    git add .
+    if ! git diff --cached --quiet; then
+        git commit -m "Updated current version"
+        git push origin main
+    fi
 fi
+# Commit only if there are changes
+
 
 echo "Done."
