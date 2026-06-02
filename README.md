@@ -50,7 +50,7 @@ To use these configs on your Fedora system (example):
 
 1. Ensure the following programs are installed (package names may vary by distro):
 
-- `hyprland` : https://wiki.hypr.land/Getting-Started/Installation/#packages|https://copr.fedorainfracloud.org/coprs/lionheartp/Hyprland
+- `hyprland` : https://wiki.hypr.land/Getting-Started/Installation/#packages | https://copr.fedorainfracloud.org/coprs/lionheartp/Hyprland
 - `hyprpaper`
 - `kitty`
 - `rofi`
