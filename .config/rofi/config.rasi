@@ -1,0 +1,131 @@
+configuration {
+    modi: "drun,window";
+    show-icons: true;
+    icon-theme: "Papirus";
+    display-drun: "󰀻 Apps";
+    display-window: "󱂬 Windows";
+}
+
+@theme "dark-blue"
+
+* {
+    bg:             #111827;
+    bg-alt:         #1f2937;
+    fg:             #e5e7eb;
+
+    app-bg:         transparent;
+    app-hover:      #68a098;
+    app-text:       #0f172a;
+
+    border-color:   #60a5fa;
+    selected-border-color: #0d1ad9;
+
+    font: "JetBrainsMono Nerd Font 12";
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    width: 700px;
+
+    location: center;
+    anchor: center;
+
+    border: 2px;
+    border-radius: 10px;
+    border-color: @border-color;
+
+    background-color: @bg;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    spacing: 14px;
+    padding: 20px;
+    background-color: @bg-alt;
+}
+
+inputbar {
+    background-color: #374151;
+    border-radius: 12px;
+    padding: 12px;
+    spacing: 10px;
+}
+
+prompt {
+    enabled: true;
+    background-color: transparent;
+    text-color: #93c5fd;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    placeholder: "Search applications...";
+    placeholder-color: #9ca3af;
+}
+
+listview {
+    lines: 10;
+    columns: 1;
+    fixed-height: false;
+    spacing: 8px;
+    scrollbar: false;
+    background-color: transparent;
+}
+
+element {
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px;
+    border-color: #61A6FA;
+
+    background-color: @app-bg;
+    text-color: @fg;
+}
+
+element alternate {
+    background-color: @app-bg;
+    text-color: @fg;
+}
+
+element alternate.nomal {
+    background-color: @app-bg;
+    text-color: @fg;
+}
+
+element normal.normal {
+    background-color: @app-bg;
+    text-color: @fg;
+}
+
+element selected.normal {
+    border-color: @selected-border-color;
+    text-color: @fg;
+}
+
+element selected.active {
+    border-color: @selected-border-color;
+    text-color: @fg;
+}
+
+element selected.urgent {
+    border-color: @selected-border-color;
+    text-color: @fg;
+}
+
+element-icon {
+    background-color: transparent;
+    size: 22px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+message {
+    enabled: false;
+}
