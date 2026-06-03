@@ -1,6 +1,6 @@
 {
   "custom/distro": {
-    "format": "",
+    "format": "",
     "tooltip": false
   },
   "custom/terminal": {
@@ -14,7 +14,7 @@
     "tooltip": false
   },
   "custom/obsidian": {
-    "format": "󰹕",
+    "format": "",
     "on-click": "obsidian",
     "tooltip": false
   },
@@ -25,17 +25,12 @@
   },
   "custom/files": {
     "format": "",
-    "on-click": "thunar",
-    "tooltip": false
-  },
-  "custom/spotify": {
-    "format": "",
-    "on-click": "spotify",
+    "on-click": "dolphin",
     "tooltip": false
   },
   "custom/browser": {
-    "format": "",
-    "on-click": "firefox",
+    "format": "",
+    "on-click": "brave-browser",
     "tooltip": false
   }
 }
