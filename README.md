@@ -55,6 +55,7 @@ To use these configs on your Fedora system (example):
 - `kitty`
 - `rofi`
 - `waybar`
+- `hyprshot`
 - `pipewire` / `pipewire-pulse` (or PulseAudio compatibility)
 - `playerctl`, `wpctl`, `nm-applet`, `blueman` (optional integrations)
 
