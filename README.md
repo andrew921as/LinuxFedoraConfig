@@ -74,5 +74,10 @@ To use these configs on your Fedora system (example):
 
 This setup combines Hyprland, Hyprpaper, Kitty, Rofi, and Waybar with custom theming. See individual project documentation for deeper customization options.
 
+## Cloud connections
+
+In this case I'm using rclone with the command I mount the connection that I created called Onedrive:
+rclone mount Onedrive: ~/Onedrive --daemon
+
 ---
 Updated: generated documentation for the `.config` folder in this repository.
