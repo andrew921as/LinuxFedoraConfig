@@ -15,7 +15,7 @@
   },
   "custom/obsidian": {
     "format": "",
-    "on-click": "obsidian",
+    "on-click": "flatpak run md.obsidian.Obsidian",
     "tooltip": false
   },
   "custom/office": {
