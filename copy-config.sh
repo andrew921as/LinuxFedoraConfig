@@ -12,7 +12,7 @@ REPO="$REAL_HOME/Documents/LinuxFedoraConfig"
 mkdir -p "$DEST"
 
 # Copy selected config folders
-for dir in hypr kitty rofi waybar; do
+for dir in hypr kitty rofi waybar fish; do
     if [ -d "$SOURCE/$dir" ]; then
         rsync -av --delete "$SOURCE/$dir/" "$DEST/$dir/"
         echo "Synced: $dir"
