@@ -53,6 +53,7 @@ To use these configs on your Fedora system (example):
 - `hyprland` : https://wiki.hypr.land/Getting-Started/Installation/#packages | https://copr.fedorainfracloud.org/coprs/lionheartp/Hyprland
 - `hyprpaper`
 - `kitty`
+- `fish`
 - `rofi`
 - `waybar`
 - `hyprshot`
