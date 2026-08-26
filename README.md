@@ -1,6 +1,6 @@
 # LinuxFedoraConfig
 
-This repository contains a curated set of Wayland desktop configuration files for Fedora, focused on a compact Hyprland-based setup. The configs live under `.config` and cover the compositor, wallpaper daemon, terminal, launcher, and a customized Waybar status bar.
+This repository contains a curated set of Wayland desktop configuration files for Fedora, focused on a compact Hyprland-based setup. The configs live under `.config` and cover the compositor, wallpaper daemon, terminal, launcher, a customized Waybar status bar and Mako as daemon to get the notifications.
 
 ## Overview
 
@@ -9,18 +9,20 @@ This repository contains a curated set of Wayland desktop configuration files fo
 - **Terminal:** Kitty — main terminal configuration is in [.config/kitty/kitty.conf](.config/kitty/kitty.conf).
 - **Launcher / Menu:** Rofi — theming and layout in [.config/rofi/config.rasi](.config/rofi/config.rasi). Hyprland points `$menu` to a rofi drun configuration.
 - **Status bar:** Waybar — main entry is [.config/waybar/config.jsonc](.config/waybar/config.jsonc); style and tokens live in the same folder.
+- **Notification daemon**: Mako - main entry is [.config/mako/config.]; some styles and runs lives in hyprland.conf.
 
 ## Key files and where to edit
 
 - Hyprland config: [.config/hypr/hyprland.conf](.config/hypr/hyprland.conf)
-	- Defines keybindings, workspaces, autostart (eg. `exec-once = waybar & hyprpaper`), variables for `kitty`, `rofi`, and other programs.
+  - Defines keybindings, workspaces, autostart (eg. `exec-once = waybar & hyprpaper`), variables for `kitty`, `rofi`, and other programs.
 - Hyprpaper wallpaper: [.config/hypr/hyprpaper.conf](.config/hypr/hyprpaper.conf)
 - Kitty terminal: [.config/kitty/kitty.conf](.config/kitty/kitty.conf)
 - Rofi theme / menu: [.config/rofi/config.rasi](.config/rofi/config.rasi)
 - Waybar configuration: [.config/waybar/config.jsonc](.config/waybar/config.jsonc)
-	- Visual styling: [.config/waybar/style.css](.config/waybar/style.css)
-	- Module files: [.config/waybar/modules/](.config/waybar/modules/) (audio, battery, clock, connections, distro, groups, idle-ihibitor, power-profiles-daemon, storage, system, tray-notif, workspace)
-	- CSS tokens (variables): [.config/waybar/tokens/](.config/waybar/tokens/)
+  - Visual styling: [.config/waybar/style.css](.config/waybar/style.css)
+  - Module files: [.config/waybar/modules/](.config/waybar/modules/) (audio, battery, clock, connections, distro, groups, idle-ihibitor, power-profiles-daemon, storage, system, tray-notif, workspace)
+  - CSS tokens (variables): [.config/waybar/tokens/](.config/waybar/tokens/)
+- Mako configuragion:[.config/mako/config/](.config/mako/config/), for more customization find it in:[.config/hypr/hyprland.conf](.config/hypr/hyprland.conf)
 
 ## Programs used and purpose
 
@@ -29,6 +31,7 @@ This repository contains a curated set of Wayland desktop configuration files fo
 - Kitty — GPU-accelerated terminal emulator; the `kitty.conf` included here customizes fonts, colors, and behavior.
 - Rofi — application launcher and window switcher; `config.rasi` contains theme colors, sizes, and behavior to match the desktop style.
 - Waybar — Wayland status bar; the setup uses a modular layout (left/center/right) and includes modules for audio, network/bluetooth, battery, clock, system metrics, workspace indicators, and a tray/notification area. Tokens in `tokens/` centralize colors and spacing.
+- Mako - Mako is used as principal notifications daemon, I needed a listener that receives the system notifications and act corresponding to the profile. As long as Hyprctl allows to generate notifications, just a listener is needed to start working.
 
 ## Waybar modules (what they do)
 
@@ -59,8 +62,10 @@ To use these configs on your Fedora system (example):
 - `hyprshot`
 - `pipewire` / `pipewire-pulse` (or PulseAudio compatibility)
 - `playerctl`, `wpctl`, `nm-applet`, `blueman` (optional integrations)
+- `mako`
 
 2. Ensure that the following fonts are installed:
+
 - `JetBrainsMono Nerd Font`: https://www.nerdfonts.com/font-downloads
 
 3. Start or restart Hyprland (log out / log in) to pick up the new config. Hyprland's `exec-once` will start Waybar and Hyprpaper automatically if present.
@@ -73,7 +78,7 @@ To use these configs on your Fedora system (example):
 
 ## Credits
 
-This setup combines Hyprland, Hyprpaper, Kitty, Rofi, and Waybar with custom theming. See individual project documentation for deeper customization options.
+This setup combines Hyprland, Hyprpaper, Kitty, Rofi, Mako and Waybar with custom theming. See individual project documentation for deeper customization options.
 
 ## Cloud connections
 
@@ -81,4 +86,5 @@ In this case I'm using rclone with the command I mount the connection that I cre
 rclone mount Onedrive: ~/Onedrive --daemon
 
 ---
+
 Updated: generated documentation for the `.config` folder in this repository.
