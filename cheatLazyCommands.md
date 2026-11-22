@@ -6,7 +6,7 @@
 - <number>j _move down that number of lines Ej: 10j_
 - gg Go to the first line
 - :$ Go to the last line of the document
-- 0 Go to the start of thr line
+- 0 Go to the start of the line
 - ^ Go to the first non-blank character of the line
 - $ Go to the end of the line
 - w Jump forward to the start of the next word
@@ -114,3 +114,11 @@
 - ]h Go to next git hunk/change
 - [h Go to previous git hunk/change
 - <leader>gb Show git blame for the current line a creates a new file(With the explorer files opened)
+
+### Menu commands
+
+- [ prev
+- ] next
+- g goto
+- gh hunk
+- z fold
